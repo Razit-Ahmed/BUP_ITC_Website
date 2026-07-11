@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Check Application Status</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-gray-200">
+
+<div class="min-h-screen flex items-center justify-center">
+
+<div class="bg-gray-900 p-8 rounded-xl w-full max-w-md">
+
+<h2 class="text-2xl font-bold mb-6 text-center">
+Check Application Status
+</h2>
+
+<form id="statusForm" class="space-y-4">
+
+<input
+type="text"
+name="studentId"
+placeholder="Enter Student ID"
+class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<p class="text-center text-gray-500 text-sm">OR</p>
+
+<input
+type="email"
+name="email"
+placeholder="Enter Email"
+class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<button
+type="submit"
+class="w-full bg-blue-600 hover:bg-blue-700 rounded-lg py-3">
+Check Status
+</button>
+
+</form>
+
+<div id="result" class="mt-6 text-center"></div>
+
+</div>
+
+</div>
+
+<script type="module" src="../js/checkStatus.js"></script>
+
+</body>
+</html>

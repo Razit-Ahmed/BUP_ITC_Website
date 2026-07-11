@@ -1,0 +1,15 @@
+BUP ITC Website Documentation Pointer
+
+This legacy file is kept only as a compatibility pointer.
+
+Current documentation lives here:
+
+1. README.md
+   Quick project overview, repository structure, and startup steps.
+
+2. MAINTAINER_GUIDE.md
+   Full architecture, route behavior, data model reference, admin/public flows,
+   and file-by-file maintainer notes.
+
+If you need accurate information about the current codebase, use those two files
+instead of older screenshots, notes, or historical summaries.
