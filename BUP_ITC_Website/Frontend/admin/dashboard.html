@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./js/authCheck.js"></script>
+</head>
+
+<body class="bg-black text-gray-200">
+
+<div class="flex min-h-screen">
+
+<div id="adminSidebar"></div>
+
+<div class="flex-1 p-10">
+
+<h1 class="text-3xl font-bold mb-4">Dashboard</h1>
+
+<p class="text-gray-400 mb-6">
+Welcome to the BUP ITC Admin Dashboard.
+</p>
+
+<div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+
+  <h2 class="text-xl font-semibold mb-4">Registration Control</h2>
+
+  <div id="registrationStatus" class="mb-4 text-lg"></div>
+
+  <button id="toggleBtn"
+    class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg">
+    Toggle Registration
+  </button>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="./js/settingsAdmin.js"></script>
+
+
+<script src="./components/sidebar.js"></script>
+
+</body>
+</html>

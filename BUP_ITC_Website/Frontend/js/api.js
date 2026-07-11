@@ -1,8 +1,8 @@
 const API_BASE_URL =
-  window.location.hostname === "localhost" ||
-  window.location.hostname === "127.0.0.1"
+  (window.location.hostname === "localhost" ||
+   window.location.hostname === "127.0.0.1")
     ? "http://localhost:3000"
-    : "https://bup-itc.onrender.com";
+    : window.location.origin;
 
 export default API_BASE_URL;
 
@@ -16,13 +16,10 @@ export function resolveImageUrl(imagePath, fallbackImage) {
     : imagePath;
 }
 
+
 async function request(endpoint, options = {}) {
   const res = await fetch(`${API_BASE_URL}${endpoint}`, options);
-
-  const isJson = res.headers
-    .get("content-type")
-    ?.includes("application/json");
-
+  const isJson = res.headers.get("content-type")?.includes("application/json");
   const data = isJson ? await res.json() : null;
 
   if (!res.ok) {

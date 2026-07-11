@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Manage Press</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./js/authCheck.js"></script>
+
+</head>
+
+<body class="bg-black text-gray-200">
+
+<div class="flex min-h-screen">
+
+<div id="adminSidebar"></div>
+
+<div class="flex-1 p-10">
+
+<h1 class="text-3xl font-bold mb-6">Press Management</h1>
+
+<div class="bg-gray-900 p-6 rounded-lg mb-10">
+
+<h2 class="text-xl font-semibold mb-4">Add Press</h2>
+
+<form id="pressForm" class="space-y-4">
+
+<input type="text" id="title" placeholder="Title" class="w-full p-3 bg-gray-800" required>
+
+<textarea id="description" placeholder="Description" class="w-full p-3 bg-gray-800"></textarea>
+
+<input type="text" id="date" placeholder="Date (YYYY-MM-DD)" class="w-full p-3 bg-gray-800">
+
+<input type="text" id="category" placeholder="Category (e.g. Announcement)" class="w-full p-3 bg-gray-800">
+
+
+<input type="file" id="imageFile" accept="image/*" class="w-full p-3 bg-gray-800">
+
+<button id="submitBtn" class="bg-blue-600 px-5 py-2 rounded text-white">
+Add Press
+</button>
+
+</form>
+
+</div>
+
+<h2 class="text-xl font-semibold mb-4">All Press</h2>
+<div id="pressList" class="space-y-4"></div>
+
+</div>
+</div>
+
+<script src="./components/sidebar.js"></script>
+<script type="module" src="./js/pressAdmin.js"></script>
+
+</body>
+</html>

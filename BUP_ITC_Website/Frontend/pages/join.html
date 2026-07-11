@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>BUP ITC | Join the Club</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="../components/navbar.js"></script>
+<script src="../components/footer.js"></script>
+<script src="../components/hero.js"></script>
+
+</head>
+
+<body class="bg-black text-gray-200">
+
+
+<div id="navbar"></div>
+
+
+
+<div
+data-hero
+data-title="Join BUP Info Tech Club"
+data-subtitle="Become part of a community of developers, innovators, and problem solvers."
+data-badge="Membership Application">
+</div>
+
+
+
+
+<section class="relative bg-gradient-to-b from-blue-950 via-black to-black py-20">
+
+<div class="max-w-4xl mx-auto px-6">
+
+
+<div id="registrationStatus" class="text-center mb-10"></div>
+
+
+<div id="registrationForm" class="hidden bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-xl">
+
+<h2 class="text-2xl font-semibold mb-6 text-center">
+Membership Application
+</h2>
+
+<form id="joinForm" class="grid md:grid-cols-2 gap-6">
+
+<input
+type="text"
+name="name"
+placeholder="Full Name"
+required
+class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<input
+type="text"
+name="studentId"
+placeholder="Student ID"
+required
+class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<input
+type="text"
+name="department"
+placeholder="Department"
+required
+class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<input
+type="text"
+name="batch"
+placeholder="Batch (Example: 2023)"
+required
+class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+required
+class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<input
+type="text"
+name="phone"
+placeholder="Phone Number"
+required
+class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<textarea
+name="skills"
+placeholder="Skills (Programming languages, tools etc)"
+rows="3"
+class="md:col-span-2 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"></textarea>
+
+<input
+type="url"
+name="portfolio"
+placeholder="Portfolio / GitHub / LinkedIn (optional)"
+class="md:col-span-2 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"
+/>
+
+<textarea
+name="motivation"
+placeholder="Why do you want to join BUP ITC?"
+rows="4"
+class="md:col-span-2 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3"></textarea>
+
+<button
+type="submit"
+class="md:col-span-2 bg-blue-600 hover:bg-blue-700 transition rounded-lg py-3 font-semibold">
+Apply for Membership
+</button>
+
+</form>
+
+<p id="formMessage" class="text-center mt-6"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="py-20 bg-black">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<div class="text-center mb-12">
+<span class="text-blue-400 text-sm font-semibold">Member Benefits</span>
+<h2 class="text-3xl font-bold mt-2">
+What You'll Get as a Member
+</h2>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+<div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+<h3 class="font-semibold text-lg mb-1">Exclusive Workshops</h3>
+<p class="text-gray-400 text-sm">
+Access to hands-on technical workshops and masterclasses.
+</p>
+</div>
+
+<div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+<h3 class="font-semibold text-lg mb-1">Project Collaborations</h3>
+<p class="text-gray-400 text-sm">
+Work on exciting projects with like-minded peers.
+</p>
+</div>
+
+<div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+<h3 class="font-semibold text-lg mb-1">Industry Networking</h3>
+<p class="text-gray-400 text-sm">
+Connect with professionals and alumni.
+</p>
+</div>
+
+<div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+<h3 class="font-semibold text-lg mb-1">Early Access</h3>
+<p class="text-gray-400 text-sm">
+Priority registration for competitions and events.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-center">
+
+<div class="max-w-3xl mx-auto px-6">
+
+<span class="text-blue-300 text-sm font-semibold">Stay Updated</span>
+
+<h2 class="text-3xl font-bold mt-2 mb-4">
+Stay Connected
+</h2>
+
+<p class="text-gray-200 mb-8">
+Follow our official channels for future opportunities,
+events, and club updates.
+</p>
+
+<a
+href="https://www.facebook.com/share/1DpacDC5zB/"
+target="_blank"
+rel="noopener noreferrer"
+class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg font-semibold">
+Follow on Facebook
+</a>
+
+</div>
+
+</section>
+
+
+
+
+<div id="footer"></div>
+
+
+<script type="module" src="../js/join.js"></script>
+
+</body>
+</html>
