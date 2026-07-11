@@ -116,7 +116,7 @@ Join the Club
 <div class="border-t border-blue-800 mt-12 pt-6 text-center text-gray-500 text-sm">
 
 © ${new Date().getFullYear()} BUP Info Tech Club. All rights reserved.<br>
-Developed by Asif Ahmed Rezvi.
+Developed by REZVI ICT-9 <br> & <br> SUAD ICT-11
 
 </div>
 
