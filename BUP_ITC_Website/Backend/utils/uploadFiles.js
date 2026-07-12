@@ -1,41 +1,38 @@
-const fs = require("fs/promises");
-const multer = require("multer");
-const path = require("path");
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const cloudinary = require("../config/cloudinary");
 
-const UPLOADS_DIR = path.join(__dirname, "..", "uploads");
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, UPLOADS_DIR);
-  },
-  filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-${file.originalname}`);
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: "bup_itc",
+    allowed_formats: ["jpg", "jpeg", "png", "webp"],
+    resource_type: "image",
+    public_id: (req, file) => {
+      return `${Date.now()}-${file.originalname.split(".")[0]}`;
+    }
   }
 });
 
 function getUploadedImagePath(file) {
-  return file ? `/uploads/${file.filename}` : "";
+  return file ? file.path : "";
 }
 
 async function removeUploadedFile(imagePath) {
-  if (!imagePath || !imagePath.startsWith("/uploads/")) {
-    return;
-  }
-
-  const absolutePath = path.join(UPLOADS_DIR, path.basename(imagePath));
+  if (!imagePath) return;
 
   try {
-    await fs.unlink(absolutePath);
+    const parts = imagePath.split("/");
+    const filename = parts[parts.length - 1];
+    const publicId = filename.substring(0, filename.lastIndexOf("."));
+
+    await cloudinary.uploader.destroy(`bup_itc/${publicId}`);
   } catch (error) {
-    if (error.code !== "ENOENT") {
-      throw error;
-    }
+    console.error("Cloudinary delete failed:", error.message);
   }
 }
 
 module.exports = {
   storage,
-  UPLOADS_DIR,
   getUploadedImagePath,
   removeUploadedFile
 };
